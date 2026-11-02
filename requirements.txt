@@ -1,0 +1,12 @@
+uiautomation==2.0.29        # Windows' accessibility list: apps and web pages (Edge)
+pynput==1.8.2               # the real mouse and keyboard (types any character); the kill-switch hotkey
+mss==10.2.0                 # screenshots
+pillow==12.3.0
+winrt-Windows.Media.Ocr==3.2.1              # Windows' built-in OCR
+winrt-Windows.Graphics.Imaging==3.2.1
+winrt-Windows.Storage.Streams==3.2.1
+winrt-Windows.Foundation==3.2.1
+winrt-Windows.Foundation.Collections==3.2.1
+winrt-Windows.Globalization==3.2.1
+pytest==9.1.1
+keyring>=25.0.0
