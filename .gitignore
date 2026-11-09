@@ -1,0 +1,19 @@
+# Per-machine state: step logs with screenshots, the tool's Edge profile, the owner's profile details
+data/
+logs/
+
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.log
+.tmp.driveupload/
+
+# Secrets and local databases: never commit
+.env
+.env.*
+*.db*
+*.key
+*.pem
+*.session.json
+data/secrets/

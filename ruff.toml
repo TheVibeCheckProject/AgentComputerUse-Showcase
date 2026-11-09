@@ -1,0 +1,17 @@
+# Ruff lint settings. Run: python -m ruff check .
+line-length = 120          # the codebase's wrap width
+target-version = "py313"   # the Mini, the laptop and CI all run 3.13
+
+[lint]
+ignore = [
+    # A computer run must survive anything the screen, Windows or a model throws at it and carry on or stop
+    # cleanly, so reading the screen and acting on it catch everything on purpose. Narrowing these would turn a
+    # skipped element into a crashed run with the mouse mid-task.
+    "BLE001",  # blind-except
+    "S110",    # try-except-pass (the same, where there is nothing worth logging)
+    "S112",    # try-except-continue (skip an element that vanished mid-read and keep walking)
+]
+
+[lint.per-file-ignores]
+# Test doubles stand in for Windows, the screen and the mouse with plain class attributes (monitors = [...]).
+"tests/*" = ["RUF012"]
